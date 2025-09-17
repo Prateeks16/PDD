@@ -58,7 +58,4 @@ async def predict_base64(req: Base64ImageRequest):
         all_probs={r["label"]: float(r["score"]) for r in results}
     )
 
-# ----------- Run Server -----------
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
